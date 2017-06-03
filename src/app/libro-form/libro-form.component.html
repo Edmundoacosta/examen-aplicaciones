@@ -1,0 +1,18 @@
+<h2 class="text-center">Ingresar</h2>
+<form class="form-group">
+	<div class="form-group">
+		<input type="text" placeholder="Titulo" #titulo class="form-control">
+	</div>
+	<div class="form-group">
+		<input type="text" placeholder="Reseña" #resena class="form-control">
+	</div>
+	<div class="form-group">
+		<input type="text" placeholder="Autor" #autor class="form-control">
+	</div>
+
+	<div class="form-group">
+		<input type="text" placeholder="imagen" #img class="form-control">
+	</div>
+
+	<a href="#" (click)="crear(titulo.value, resena.value, autor.value, img.value)" class="btn btn-success btn-block" >Insertar</a>
+</form>

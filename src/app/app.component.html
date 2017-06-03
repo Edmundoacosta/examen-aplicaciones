@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">{{title}}</md-toolbar>
+
+<md-grid-list cols="12" rowHeight="950px">
+  <md-grid-tile [colspan]="3" *ngFor="let contacto of examen">
+  	<md-card >
+		<md-card-title>{{contacto.nombre}}</md-card-title>
+		<md-card-subtitle>
+			{{contacto.genero}}
+		</md-card-subtitle>
+		<md-card-subtitle>
+			{{contacto.duracion}}
+		</md-card-subtitle>
+		<img src="{{contacto.poster}}" md-card-image>
+		<md-card-content>
+			{{contacto.sinopsis}}
+		</md-card-content>
+		<md-card-actions>
+			<button md-button>SHARE</button>
+		</md-card-actions>
+	</md-card>
+  </md-grid-tile>
+</md-grid-list>
+
